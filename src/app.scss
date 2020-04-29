@@ -5,6 +5,7 @@
   border: 1px solid grey;
   -webkit-font-smoothing: antialiased;
   font-family: 'HarmoniaSansProCyr-Regular',Arial,sans-serif;
+  color: #58402c;
 }
 
 header {
@@ -13,7 +14,6 @@ header {
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  color: #58402c;
   height:75px;
   line-height:25.6px;
   margin-bottom:40px;
@@ -68,4 +68,59 @@ header {
       align-items: center;
     }
   }
+}
+
+main {
+  margin: auto;
+  display: table;
+
+  .blocco-centrale{
+    display: flex;
+    margin:auto;
+    margin: 100px 128px auto;
+
+    .blocco-bottoni{
+      display: flex;
+      justify-content: flex-start;
+
+      .bottone, span{
+        margin-right: 15px;
+      }
+    }
+
+    .blocco-sinistra{
+
+      h1{
+        font-size:50px;
+        font-weight:600;
+        margin-bottom: 30px;
+      }
+
+      p{
+        font-size:22px;
+        line-height:33px;
+        margin-bottom: 40px;
+        letter-spacing: 1px;
+      }
+
+      a{
+        font-size:14px;
+        line-height:21px;
+      }
+
+      .fal fa-arrow-right{
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    .blocco-destra{
+      img{
+        width: 570px;
+        height: 350px;
+      }
+    }
+
+  }
+
 }
