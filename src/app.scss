@@ -1,0 +1,46 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+
+  ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 37px;
+
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    flex: auto;
+  }
+
+  .bottone{
+    width: 92px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid blue;
+
+    button {
+      color: blue;
+    }
+
+    .fab {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
