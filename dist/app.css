@@ -5,7 +5,6 @@
   border: 1px solid grey;
   -webkit-font-smoothing: antialiased;
   font-family: "HarmoniaSansProCyr-Regular", Arial, sans-serif;
-  color: #58402c;
 }
 
 header {
@@ -20,6 +19,7 @@ header {
   border-bottom: 1px solid;
   font-size: 14px;
   font-weight: 600;
+  color: #58402c;
 }
 
 header .logo {
@@ -61,7 +61,7 @@ header .bottone:hover {
 
 header .bottone button {
   color: #263972;
-  background-color: white;
+  background-color: transparent;
   font-size: 14px;
 }
 
@@ -73,22 +73,55 @@ header .bottone .fab {
 main {
   margin: auto;
   display: table;
+  color: #58402c;
 }
 
 main .blocco-centrale {
   display: flex;
-  margin: auto;
-  margin: 100px 128px auto;
+  margin: 100px 128px;
 }
 
 main .blocco-centrale .blocco-bottoni {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 35px;
+}
+
+main .blocco-centrale .blocco-bottoni .fab {
+  display: flex;
+  align-items: center;
+}
+
+main .blocco-centrale .blocco-bottoni .bottone {
+  width: 185px;
+  height: 35px;
+  border-radius: 8px;
+  border: 1px solid;
+  background: #263972;
+  color: white;
+}
+
+main .blocco-centrale .blocco-bottoni .bottone:hover {
+  background: blue;
 }
 
 main .blocco-centrale .blocco-bottoni .bottone,
 main .blocco-centrale .blocco-bottoni span {
   margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .blocco-centrale .blocco-bottoni button {
+  font-size: 14px;
+  font-weight: 600;
+  background-color: transparent;
+  color: white;
+}
+
+main .blocco-centrale .blocco-bottoni span {
+  font-size: 13px;
 }
 
 main .blocco-centrale .blocco-sinistra h1 {
@@ -102,6 +135,7 @@ main .blocco-centrale .blocco-sinistra p {
   line-height: 33px;
   margin-bottom: 40px;
   letter-spacing: 1px;
+  font-weight: 400;
 }
 
 main .blocco-centrale .blocco-sinistra a {
@@ -109,13 +143,76 @@ main .blocco-centrale .blocco-sinistra a {
   line-height: 21px;
 }
 
-main .blocco-centrale .blocco-sinistra .fal fa-arrow-right {
-  width: 14px;
-  height: 14px;
-}
-
 main .blocco-centrale .blocco-destra img {
   width: 570px;
   height: 350px;
+}
+
+main hr {
+  margin: 80px 0px 80px;
+}
+
+.blocco-coloured {
+  background: #FFE7D2;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.blocco-coloured h2 {
+  text-align: center;
+  font-weight: 600;
+  margin: 50px 261px;
+  padding: 0px 148px;
+}
+
+.blocco-coloured .blocco-testo-img {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.blocco-coloured .blocco-testo-img .blocco1,
+.blocco-coloured .blocco-testo-img .blocco2,
+.blocco-coloured .blocco-testo-img .blocco3 {
+  width: 274px;
+  height: 200px;
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.blocco-coloured .blocco-testo-img .blocco1 img,
+.blocco-coloured .blocco-testo-img .blocco2 img,
+.blocco-coloured .blocco-testo-img .blocco3 img {
+  width: 140px;
+}
+
+.blocco-coloured .blocco-testo-img .blocco1 #ladiversa,
+.blocco-coloured .blocco-testo-img .blocco2 #ladiversa,
+.blocco-coloured .blocco-testo-img .blocco3 #ladiversa {
+  width: 60px;
+}
+
+.blocco-coloured .blocco-testo-img .blocco1 p,
+.blocco-coloured .blocco-testo-img .blocco2 p,
+.blocco-coloured .blocco-testo-img .blocco3 p {
+  text-align: center;
+}
+
+.blocco-coloured .img-big {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.blocco-coloured .img-big img {
+  width: 280px;
+}
+
+.blocco-coloured .blocco-feedback #img-big-sx {
+  width: 768px;
 }
 
