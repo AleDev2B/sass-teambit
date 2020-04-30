@@ -9,9 +9,9 @@
 
 header {
   display: flex;
-  width: 82vw;
   align-items: center;
   justify-content: space-between;
+  width: 82vw;
   margin: auto;
   height: 75px;
   line-height: 25.6px;
@@ -32,11 +32,6 @@ header ul li {
   list-style-type: none;
   display: inline-block;
   margin-right: 37px;
-}
-
-header ul li img {
-  display: inline-flex;
-  vertical-align: middle;
 }
 
 header .menu {
@@ -68,6 +63,7 @@ header .bottone button {
 header .bottone .fab {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 main {
@@ -152,28 +148,28 @@ main hr {
   margin: 80px 0px 80px;
 }
 
-.blocco-coloured {
+main .blocco-coloured {
   background: #FFE7D2;
   flex-wrap: wrap;
   margin: auto;
 }
 
-.blocco-coloured h2 {
+main .blocco-coloured h2 {
   text-align: center;
   font-weight: 600;
   margin: 50px 261px;
   padding: 0px 148px;
 }
 
-.blocco-coloured .blocco-testo-img {
+main .blocco-coloured .blocco-testo-img {
   display: flex;
   margin: auto;
   justify-content: center;
 }
 
-.blocco-coloured .blocco-testo-img .blocco1,
-.blocco-coloured .blocco-testo-img .blocco2,
-.blocco-coloured .blocco-testo-img .blocco3 {
+main .blocco-coloured .blocco-testo-img .blocco1,
+main .blocco-coloured .blocco-testo-img .blocco2,
+main .blocco-coloured .blocco-testo-img .blocco3 {
   width: 274px;
   height: 200px;
   margin-bottom: 36px;
@@ -183,36 +179,36 @@ main hr {
   flex-wrap: wrap;
 }
 
-.blocco-coloured .blocco-testo-img .blocco1 img,
-.blocco-coloured .blocco-testo-img .blocco2 img,
-.blocco-coloured .blocco-testo-img .blocco3 img {
+main .blocco-coloured .blocco-testo-img .blocco1 img,
+main .blocco-coloured .blocco-testo-img .blocco2 img,
+main .blocco-coloured .blocco-testo-img .blocco3 img {
   width: 140px;
 }
 
-.blocco-coloured .blocco-testo-img .blocco1 #ladiversa,
-.blocco-coloured .blocco-testo-img .blocco2 #ladiversa,
-.blocco-coloured .blocco-testo-img .blocco3 #ladiversa {
+main .blocco-coloured .blocco-testo-img .blocco1 #ladiversa,
+main .blocco-coloured .blocco-testo-img .blocco2 #ladiversa,
+main .blocco-coloured .blocco-testo-img .blocco3 #ladiversa {
   width: 60px;
 }
 
-.blocco-coloured .blocco-testo-img .blocco1 p,
-.blocco-coloured .blocco-testo-img .blocco2 p,
-.blocco-coloured .blocco-testo-img .blocco3 p {
+main .blocco-coloured .blocco-testo-img .blocco1 p,
+main .blocco-coloured .blocco-testo-img .blocco2 p,
+main .blocco-coloured .blocco-testo-img .blocco3 p {
   text-align: center;
 }
 
-.blocco-coloured .img-big {
+main .blocco-coloured .img-big {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 36px;
 }
 
-.blocco-coloured .img-big img {
+main .blocco-coloured .img-big img {
   width: 280px;
 }
 
-.blocco-coloured .blocco-feedback .provola img {
-  height: 200px;
+main section.blocco-feedback div.provola img {
+  width: 270px;
 }
 

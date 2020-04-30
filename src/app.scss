@@ -7,12 +7,37 @@
   font-family: 'HarmoniaSansProCyr-Regular',Arial,sans-serif;
 }
 
-// SEZIONE HEADER
-header {
+@mixin display-flex {
   display: flex;
-  width: 82vw;
   align-items: center;
   justify-content: space-between;
+}
+
+@mixin photo-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin icon-setting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin photobig-settings{
+  width:270px;
+}
+
+@mixin photoSmall-AlatoBig{
+  width:768px;
+  height: 471px;
+}
+
+// SEZIONE HEADER
+header {
+  @include display-flex;
+  width: 82vw;
   margin: auto;
   height:75px;
   line-height:25.6px;
@@ -33,10 +58,6 @@ header {
     display: inline-block;
     margin-right: 37px;
 
-  img {
-    display: inline-flex;
-    vertical-align: middle;
-  }
   }
 
   .menu {
@@ -65,8 +86,7 @@ header {
     }
 
     .fab {
-      display: flex;
-      align-items: center;
+      @include icon-setting
     }
   }
 }
@@ -156,65 +176,68 @@ main {
     margin: 80px 0px 80px;
   }
 
+  // inizio blocco coloured
+  .blocco-coloured{
+    background: #FFE7D2;
+    flex-wrap: wrap;
+    margin:auto;
 
-}
+    h2{
+      text-align: center;
+      font-weight:600;
+      margin: 50px 261px;
+      padding: 0px 148px;
+    }
 
-.blocco-coloured{
-  background: #FFE7D2;
-  flex-wrap: wrap;
-  margin:auto;
+    .blocco-testo-img{
+      display: flex;
+      margin: auto;
+      justify-content: center;
 
-  h2{
-    text-align: center;
-    font-weight:600;
-    margin: 50px 261px;
-    padding: 0px 148px;
-  }
+      .blocco1,.blocco2,.blocco3{
+        width: 274px;
+        height: 200px;
+        margin-bottom: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
 
-  .blocco-testo-img{
-    display: flex;
-    margin: auto;
-    justify-content: center;
+        img{
+          width: 140px;
+        }
 
-    .blocco1,.blocco2,.blocco3{
-      width: 274px;
-      height: 200px;
-      margin-bottom: 36px;
+        #ladiversa{
+          width: 60px;
+        }
+
+        p{
+          text-align: center;
+        }
+      }
+    }
+
+    .img-big{
       display: flex;
       justify-content: center;
-      align-items: center;
       flex-wrap: wrap;
-
+      margin-top: 36px;
       img{
-        width: 140px;
-      }
-
-      #ladiversa{
-        width: 60px;
-      }
-
-      p{
-        text-align: center;
+        width: 280px;
       }
     }
+
+
   }
+  // FINE BLOCCO COLOURED
 
-  .img-big{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 36px;
-    img{
-      width: 280px;
-    }
-  }
+  // INIZIO BLOCCO FEEDBACK
+  section.blocco-feedback{
 
-  .blocco-feedback{
-
-    .provola {
+    div.provola {
 
       img{
-          height: 200px;
+        @include photobig-settings
       }
     }
 
@@ -223,6 +246,5 @@ main {
     }
 
   }
-
-
+// FINE DEL BLOCCO MAIN
 }
