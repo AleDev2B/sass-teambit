@@ -10,13 +10,14 @@
 
   a{
     text-decoration: none;
+    color: #58402c;
   }
 }
 
 // SEZIONE HEADER
 header {
   @include display-flex;
-  width: 82vw;
+  width: 80vw;
   margin: auto;
   height:75px;
   line-height:25.6px;
@@ -42,6 +43,16 @@ header {
     display: flex;
     justify-content: flex-end;
     flex: auto;
+
+    &:hover{
+      .triangle_menu > a {
+        color:rgb(38, 57, 114);
+      }
+    }
+
+    .triangle_menu{
+      @include display-flex-easy;
+    }
   }
 
   .bottone{
@@ -74,13 +85,20 @@ header {
 }
 // SEZIONE MAIN
 main {
-  margin: auto;
-  display: table;
   color: #58402c;
 
   section.blocco-centrale{
     display: flex;
     @include standSpacingSection;
+    width: 93vw;
+    margin: auto;
+
+    .blocco-sinistra{
+      h1{
+        font-size:50px;
+        font-weight:600;
+      }
+    }
 
     .blocco-bottoni{
       display: flex;
@@ -121,7 +139,6 @@ main {
     }
 
     .blocco-sinistra{
-
       h1{
         font-size:50px;
         font-weight:600;
@@ -148,7 +165,7 @@ main {
         height: 350px;
       }
     }
- }    //FINE PARTE ALTA SITO
+  }  //FINE PARTE ALTA SITO
 
   hr{
     margin: 80px 0px 80px;
@@ -160,6 +177,7 @@ main {
     @include standSpacingSection;
 
     h2{
+      width: 628px;
       font-weight:600;
       @include textSpacingUpDown;
     }
@@ -177,9 +195,24 @@ main {
         img{
           width: 140px;
         }
+    }
 
-        #ladiversa{
-          width: 60px;
+        .blocco3{
+          .prova{
+            @include fullCenterAll;
+            width: 274px;
+            height: 147px;
+          }
+          margin-bottom: 36px;
+          flex-wrap: wrap;
+          #ladiversa{
+            height: 105px;
+            width: 60px;
+          }
+          figcaption{
+            @include fullCenterAll;
+          }
+
         }
 
         p{
@@ -199,11 +232,11 @@ main {
     }
   }  // FINE SEZIONE COLORE PASTELLO
 
-  // INIZIO BLOCCO BIANCO FEEDBACK
+  // INIZIO PRIMO BLOCCO BIANCO FEEDBACK
   section.blocco-feedback{
-
     .container{
       @include display-flex-easy;
+      justify-content:flex-start;
       flex-wrap: nowrap;
       @include standardSpacingDiv;
 
@@ -212,9 +245,7 @@ main {
           @include photobig-settings
         }
       }
-      .photo_a_lato{
-        @include photoSmall-AlatoBig;
-      }
+
       .blocco-dx{
         .bloccoResizeTesto{
           @include standardSpacingBoxTextImg;
@@ -225,11 +256,21 @@ main {
             font-size: 21px;
             @include textDefaultSpacing;
           }
+          .photo_a_lato{
+            @include photoSmall-AlatoBig;
+          }
         }
       }
+    }  // <-- FINE PRIMO CONTAINER CONTAINER
+
+    .container-2{
+      @include display-flex-easy;
+      justify-content:flex-end;
     }
+  } // <-- FINE PRIMA SECTION
 
 // INIZIO SECONDA SEZIONE DENTRO BLOCCO FEEDBACK
+    section.blocco-feedback{
       div.blocco-sx-2 {
         .bloccoResizeTesto{
           @include standardSpacingBoxTextImg;
@@ -253,7 +294,8 @@ main {
         img{
           @include photobig-settings
         }
-      }}
+      }
+    }
 
   section.box-letter {  // <-- INIZIO DELLA SEZIONE LETTERA
     @include standSpacingSection;
@@ -280,6 +322,17 @@ main {
 
       .b-quote__author{
         @include textDefaultSpacing;
+        display: flex;
+        .b-quote__photo{
+          margin-right: 20px;
+        }
+        .b-quote__cite{
+          font-size: 13px;
+          span{
+            font-size: 14px;
+            color: blue;
+          }
+        }
       }
 
     }
@@ -374,4 +427,4 @@ main {
 
   } //<--- QUI FINISCE IL BLOCCO DEL footer
 
-  }   //<--- QUI FINISCE IL BLOCCO DEL MAIN
+     //<--- QUI FINISCE IL BLOCCO DEL MAIN

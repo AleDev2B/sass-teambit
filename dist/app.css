@@ -8,13 +8,14 @@
 
 * a {
   text-decoration: none;
+  color: #58402c;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 82vw;
+  width: 80vw;
   margin: auto;
   height: 75px;
   line-height: 25.6px;
@@ -41,6 +42,15 @@ header .menu {
   display: flex;
   justify-content: flex-end;
   flex: auto;
+}
+
+header .menu:hover .triangle_menu > a {
+  color: #263972;
+}
+
+header .menu .triangle_menu {
+  display: flex;
+  justify-content: center;
 }
 
 header .bottone {
@@ -77,14 +87,19 @@ header .bottone .fab {
 }
 
 main {
-  margin: auto;
-  display: table;
   color: #58402c;
 }
 
 main section.blocco-centrale {
   display: flex;
-  padding: 100px 100px;
+  padding: 100px;
+  width: 93vw;
+  margin: auto;
+}
+
+main section.blocco-centrale .blocco-sinistra h1 {
+  font-size: 50px;
+  font-weight: 600;
 }
 
 main section.blocco-centrale .blocco-bottoni {
@@ -162,10 +177,11 @@ main hr {
 
 main section.blocco-coloured {
   background: #FFE7D2;
-  padding: 100px 100px;
+  padding: 100px;
 }
 
 main section.blocco-coloured h2 {
+  width: 628px;
   font-weight: 600;
   text-align: center;
   margin: 30px auto;
@@ -194,19 +210,35 @@ main section.blocco-coloured .blocco-testo-img .blocco3 img {
   width: 140px;
 }
 
-main section.blocco-coloured .blocco-testo-img .blocco1 #ladiversa,
-main section.blocco-coloured .blocco-testo-img .blocco2 #ladiversa,
+main section.blocco-coloured .blocco-testo-img .blocco3 {
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+main section.blocco-coloured .blocco-testo-img .blocco3 .prova {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 274px;
+  height: 147px;
+}
+
 main section.blocco-coloured .blocco-testo-img .blocco3 #ladiversa {
+  height: 105px;
   width: 60px;
 }
 
-main section.blocco-coloured .blocco-testo-img .blocco1 p,
-main section.blocco-coloured .blocco-testo-img .blocco2 p,
-main section.blocco-coloured .blocco-testo-img .blocco3 p {
+main section.blocco-coloured .blocco-testo-img .blocco3 figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section.blocco-coloured .blocco-testo-img p {
   text-align: center;
 }
 
-main section.blocco-coloured .img-big {
+main .img-big {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,78 +246,85 @@ main section.blocco-coloured .img-big {
   margin-top: 36px;
 }
 
-main section.blocco-coloured .img-big img {
+main .img-big img {
   width: 280px;
 }
 
-main section.blocco-feedback .container {
+section.blocco-feedback .container {
   display: flex;
   justify-content: center;
+  justify-content: flex-start;
   flex-wrap: nowrap;
   padding: 80px 0 25px;
   margin: 30px 0 30px 0;
 }
 
-main section.blocco-feedback .container div.blocco-sx img {
+section.blocco-feedback .container div.blocco-sx img {
   width: 768px;
   height: 471px;
 }
 
-main section.blocco-feedback .container .photo_a_lato {
-  width: 270px;
-}
-
-main section.blocco-feedback .container .blocco-dx .bloccoResizeTesto {
+section.blocco-feedback .container .blocco-dx .bloccoResizeTesto {
   width: 420px;
   height: 500px;
 }
 
-main section.blocco-feedback .container .blocco-dx .bloccoResizeTesto h1 {
+section.blocco-feedback .container .blocco-dx .bloccoResizeTesto h1 {
   line-height: 24px;
   margin: 10px 20px 20px 20px;
 }
 
-main section.blocco-feedback .container .blocco-dx .bloccoResizeTesto p {
+section.blocco-feedback .container .blocco-dx .bloccoResizeTesto p {
   font-size: 21px;
   line-height: 24px;
   margin: 10px 20px 20px 20px;
 }
 
-main section.blocco-feedback div.blocco-sx-2 .bloccoResizeTesto {
+section.blocco-feedback .container .blocco-dx .bloccoResizeTesto .photo_a_lato {
+  width: 270px;
+}
+
+section.blocco-feedback .container-2 {
+  display: flex;
+  justify-content: center;
+  justify-content: flex-end;
+}
+
+section.blocco-feedback div.blocco-sx-2 .bloccoResizeTesto {
   width: 420px;
   height: 500px;
 }
 
-main section.blocco-feedback div.blocco-sx-2 .bloccoResizeTesto h1 {
+section.blocco-feedback div.blocco-sx-2 .bloccoResizeTesto h1 {
   line-height: 24px;
   margin: 10px 20px 20px 20px;
 }
 
-main section.blocco-feedback div.blocco-sx-2 .bloccoResizeTesto p {
+section.blocco-feedback div.blocco-sx-2 .bloccoResizeTesto p {
   font-size: 21px;
   line-height: 24px;
   margin: 10px 20px 20px 20px;
 }
 
-main section.blocco-feedback div.blocco-sx-2 img {
+section.blocco-feedback div.blocco-sx-2 img {
   width: 270px;
 }
 
-main section.blocco-feedback div.blocco-dx-2 img#different {
+section.blocco-feedback div.blocco-dx-2 img#different {
   height: 603px;
 }
 
-main section.blocco-feedback div.blocco-dx-2 img {
+section.blocco-feedback div.blocco-dx-2 img {
   width: 768px;
   height: 471px;
 }
 
-main section.box-letter {
-  padding: 100px 100px;
+section.box-letter {
+  padding: 100px;
   background: #FFE7D2;
 }
 
-main section.box-letter h5 {
+section.box-letter h5 {
   text-align: center;
   margin: 30px auto;
   line-height: 61.3334px;
@@ -294,7 +333,7 @@ main section.box-letter h5 {
   font-weight: 600;
 }
 
-main section.box-letter blockquote {
+section.box-letter blockquote {
   width: 620px;
   height: 442px;
   background: white;
@@ -302,18 +341,32 @@ main section.box-letter blockquote {
   border: 1px solid grey;
 }
 
-main section.box-letter blockquote p {
+section.box-letter blockquote p {
   line-height: 24px;
   margin: 10px 20px 20px 20px;
 }
 
-main section.box-letter blockquote .b-quote__author {
+section.box-letter blockquote .b-quote__author {
   line-height: 24px;
   margin: 10px 20px 20px 20px;
+  display: flex;
 }
 
-main section.box-letter .blocco-bottoni,
-main section.box-letter a {
+section.box-letter blockquote .b-quote__author .b-quote__photo {
+  margin-right: 20px;
+}
+
+section.box-letter blockquote .b-quote__author .b-quote__cite {
+  font-size: 13px;
+}
+
+section.box-letter blockquote .b-quote__author .b-quote__cite span {
+  font-size: 14px;
+  color: blue;
+}
+
+section.box-letter .blocco-bottoni,
+section.box-letter a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -321,14 +374,14 @@ main section.box-letter a {
   margin: 30px auto;
 }
 
-main section.box-letter .blocco-bottoni .fab,
-main section.box-letter a .fab {
+section.box-letter .blocco-bottoni .fab,
+section.box-letter a .fab {
   display: flex;
   align-items: center;
 }
 
-main section.box-letter .blocco-bottoni .bottone,
-main section.box-letter a .bottone {
+section.box-letter .blocco-bottoni .bottone,
+section.box-letter a .bottone {
   width: 185px;
   height: 35px;
   border-radius: 8px;
@@ -337,23 +390,23 @@ main section.box-letter a .bottone {
   color: white;
 }
 
-main section.box-letter .blocco-bottoni .bottone:hover,
-main section.box-letter a .bottone:hover {
+section.box-letter .blocco-bottoni .bottone:hover,
+section.box-letter a .bottone:hover {
   background: blue;
 }
 
-main section.box-letter .blocco-bottoni .bottone,
-main section.box-letter .blocco-bottoni span,
-main section.box-letter a .bottone,
-main section.box-letter a span {
+section.box-letter .blocco-bottoni .bottone,
+section.box-letter .blocco-bottoni span,
+section.box-letter a .bottone,
+section.box-letter a span {
   margin-right: 15px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-main section.box-letter .blocco-bottoni button,
-main section.box-letter a button {
+section.box-letter .blocco-bottoni button,
+section.box-letter a button {
   font-size: 14px;
   font-weight: 600;
   background-color: transparent;
@@ -361,12 +414,12 @@ main section.box-letter a button {
   border: 0px;
 }
 
-main section.box-letter .blocco-bottoni span,
-main section.box-letter a span {
+section.box-letter .blocco-bottoni span,
+section.box-letter a span {
   font-size: 13px;
 }
 
-main footer .container_footer_global {
+footer .container_footer_global {
   text-align: center;
   margin: 30px auto;
   display: flex;
@@ -375,49 +428,49 @@ main footer .container_footer_global {
   width: fit-content;
 }
 
-main footer .container_footer_global .container_logo_footer_sx {
+footer .container_footer_global .container_logo_footer_sx {
   text-align: center;
   margin: 30px auto;
   width: 300px;
   height: 69px;
 }
 
-main footer .container_footer_global .container_logo_footer_sx figcaption {
+footer .container_footer_global .container_logo_footer_sx figcaption {
   text-align: left;
 }
 
-main footer .container_footer_global .container_logo_footer_sx figcaption a {
+footer .container_footer_global .container_logo_footer_sx figcaption a {
   text-decoration: none;
 }
 
-main footer .container_footer_global .container_lista {
+footer .container_footer_global .container_lista {
   display: flex;
   text-align: center;
   margin: 30px auto;
 }
 
-main footer .container_footer_global .container_lista .List_title {
+footer .container_footer_global .container_lista .List_title {
   font-size: 18px;
   font-weight: 600;
 }
 
-main footer .container_footer_global .container_lista ul li {
+footer .container_footer_global .container_lista ul li {
   margin: 10px 15px auto;
   list-style-type: none;
   text-align: left;
 }
 
-main footer .container_footer_global .container_lista a {
+footer .container_footer_global .container_lista a {
   color: #58402c;
   font-size: 14px;
 }
 
-main footer .container_footer_global .container_lista nav#blog {
+footer .container_footer_global .container_lista nav#blog {
   height: 400px;
   width: 191px;
 }
 
-main footer .container_footer_global .container_lista nav#blog ul li {
+footer .container_footer_global .container_lista nav#blog ul li {
   text-align: justify;
 }
 
