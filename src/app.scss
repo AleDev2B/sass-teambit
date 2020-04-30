@@ -198,16 +198,11 @@ main {
       margin-bottom: 70px;
 
       img{
+        @include display-flex-easy;
         max-width: 140px;
         max-height: 105px;
         margin: 20px auto;
       }
-
-      p{
-        display:flex;
-        text-align: center;
-      }
-
     }
   }
 

@@ -202,14 +202,11 @@ main section.blocco-coloured .blocco {
 }
 
 main section.blocco-coloured .blocco img {
+  display: flex;
+  justify-content: center;
   max-width: 140px;
   max-height: 105px;
   margin: 20px auto;
-}
-
-main section.blocco-coloured .blocco p {
-  display: flex;
-  text-align: center;
 }
 
 main .img-big {
