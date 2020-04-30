@@ -1,5 +1,5 @@
 @import "variables";
-
+// impostazione generali di pagina
 * {
   margin:0;
   padding:0;
@@ -7,6 +7,10 @@
   // border: 1px solid grey;
   -webkit-font-smoothing: antialiased;
   font-family: 'HarmoniaSansProCyr-Regular',Arial,sans-serif;
+
+  a{
+    text-decoration: none;
+  }
 }
 
 // SEZIONE HEADER
@@ -84,8 +88,7 @@ main {
       margin-bottom: 35px;
 
       .fab {
-        display: flex;
-        align-items: center;
+        @include fullCenterAll;
       }
 
       .bottone{
@@ -152,14 +155,13 @@ main {
   }
 
   // INIZIO SEZIONE COLORATA PASTELLO
-  .blocco-coloured{
+  section.blocco-coloured{
     background: #FFE7D2;
-    padding: 100px 128px;
+    @include standSpacingSection;
 
     h2{
-      text-align: center;
       font-weight:600;
-      margin: 50px auto;
+      @include textSpacingUpDown;
     }
 
     .blocco-testo-img{
@@ -215,7 +217,7 @@ main {
       }
       .blocco-dx{
         .bloccoResizeTesto{
-          @include standardSpacingTextImg;
+          @include standardSpacingBoxTextImg;
           h1{
             @include textDefaultSpacing;
           }
@@ -230,7 +232,7 @@ main {
 // INIZIO SECONDA SEZIONE DENTRO BLOCCO FEEDBACK
       div.blocco-sx-2 {
         .bloccoResizeTesto{
-          @include standardSpacingTextImg;
+          @include standardSpacingBoxTextImg;
           h1{
             @include textDefaultSpacing;
           }
@@ -245,10 +247,131 @@ main {
       }
 
       div.blocco-dx-2 {
+        img#different{
+          height: 603px;
+        }
         img{
           @include photobig-settings
         }
       }}
 
-  }
-// FINE DEL BLOCCO MAIN
+  section.box-letter {  // <-- INIZIO DELLA SEZIONE LETTERA
+    @include standSpacingSection;
+    background: #FFE7D2;
+
+    h5{
+      @include textSpacingUpDown;
+      line-height:61.3334px;
+      width: 500px;
+      font-size:40px;
+      font-weight:600;
+    }
+
+    blockquote{
+      width: 620px;
+      height: 442px;
+      background: white;
+      margin: auto;
+      border: 1px solid grey;
+
+      p{
+        @include textDefaultSpacing;
+      }
+
+      .b-quote__author{
+        @include textDefaultSpacing;
+      }
+
+    }
+
+// INIZIO DELLA BUTTON SECTION (DENTRO LA SEZIONE LETTERA)
+    .blocco-bottoni,a{
+      @include fullCenterAll;
+      @include textSpacingUpDown;
+
+      .fab {
+        display: flex;
+        align-items: center;
+      }
+
+      .bottone{
+        width: 185px;
+        height: 35px;
+        border-radius: 8px;
+        border: 1px solid;
+        background:rgb(38, 57, 114);
+        color: white;
+
+        &:hover{
+          background: blue;
+        }
+      }
+      .bottone, span{
+        margin-right: 15px;
+        @include display-flex
+      }
+      button{
+        font-size:14px;
+        font-weight:600;
+        background-color: transparent;
+        color: white;
+        @include borderNone;
+      }
+
+      span{
+        font-size: 13px;
+      }
+   }     //<--- FINE DELLA SEZIONE BOTTONI
+ }     //<--- FINE DELLA SEZIONE CON LA LETTERA
+
+  footer{
+    .container_footer_global{   //<-- CONTAINER CON TUTTO IL CONTENUTO DEL FOOTER
+      @include textSpacingUpDown;
+      display:flex;
+      width: fit-content;
+      .container_logo_footer_sx {  //parte sx del footer
+        @include textSpacingUpDown;
+        width: 300px;
+        height: 69px;
+
+        figcaption{
+          text-align: left;
+          a{
+            text-decoration: none;
+          }
+        }
+      }
+      .container_lista { // <<-- parte dx del footer con lista  ->>
+        display: flex;
+        @include textSpacingUpDown;
+
+        .List_title{
+          font-size:18px;
+          font-weight:600;
+        }
+        ul li {
+          margin: 10px 15px auto;
+          list-style-type: none;
+          text-align: left;
+        }
+
+        a {
+          color:rgb(88, 64, 44);
+          font-size:14px;
+        }
+
+        nav#blog{
+          height: 400px;
+          width: 191px;
+          ul li{
+            text-align: justify;
+          }
+        }
+
+      } // <--fine container global con tutta la lista di dx ->>
+
+    }
+
+  } //<--- QUI FINISCE IL BLOCCO DEL footer
+
+  }   //<--- QUI FINISCE IL BLOCCO DEL MAIN
