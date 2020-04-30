@@ -12,6 +12,13 @@
     text-decoration: none;
     color: #58402c;
   }
+
+  img.google_logo{
+    height: 16px;
+  }
+  img.slack_logo{
+    height: 16px;
+  }
 }
 
 // SEZIONE HEADER
@@ -62,6 +69,10 @@ header {
     border-radius: 5px;
     border: 1px solid rgb(38, 57, 114);
 
+    img.google_logo{
+      height: 16px;
+    }
+
     &:hover{
       background:rgb(38, 57, 114);
       color: white;
@@ -76,10 +87,6 @@ header {
       font-size:14px;
       font-weight: 600;
       @include borderNone;
-    }
-
-    .fab {
-      @include fullCenterAll;
     }
   }
 }
@@ -104,10 +111,6 @@ main {
       display: flex;
       justify-content: flex-start;
       margin-bottom: 35px;
-
-      .fab {
-        @include fullCenterAll;
-      }
 
       .bottone{
         width: 185px;
