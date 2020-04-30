@@ -1,0 +1,54 @@
+@mixin display-flex-easy {
+  display: flex;
+  justify-content:center;
+}
+
+@mixin display-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin photo-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin fullCenterAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin borderNone {
+  border:0px;
+}
+
+@mixin standardSpacingDiv {
+  padding: 80px 0 25px;
+  margin: 30px 0 30px 0;
+}
+
+@mixin standSpacingSection {
+  margin: 100px 128px;
+}
+@mixin standardSpacingTextImg {
+  width:420px;
+  height:500px;
+}
+
+@mixin textDefaultSpacing {
+  line-height:33px;
+  margin-bottom:20px;
+}
+
+
+@mixin photobig-settings{
+  width:768px;
+  height: 471px;
+}
+
+@mixin photoSmall-AlatoBig{
+  width:270px;
+}

@@ -1,37 +1,12 @@
+@import "variables";
+
 * {
   margin:0;
   padding:0;
   box-sizing: border-box;
-  border: 1px solid grey;
+  // border: 1px solid grey;
   -webkit-font-smoothing: antialiased;
   font-family: 'HarmoniaSansProCyr-Regular',Arial,sans-serif;
-}
-
-@mixin display-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@mixin photo-setting {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@mixin icon-setting {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin photobig-settings{
-  width:270px;
-}
-
-@mixin photoSmall-AlatoBig{
-  width:768px;
-  height: 471px;
 }
 
 // SEZIONE HEADER
@@ -57,7 +32,6 @@ header {
     list-style-type: none;
     display: inline-block;
     margin-right: 37px;
-
   }
 
   .menu {
@@ -69,24 +43,28 @@ header {
   .bottone{
     width: 92px;
     height: 34px;
-    display: flex;
-    justify-content: center;
+    @include display-flex;
     border-radius: 5px;
     border: 1px solid rgb(38, 57, 114);
 
     &:hover{
       background:rgb(38, 57, 114);
       color: white;
+      & button{
+        color:white;
+      }
     }
 
     button {
       color:rgb(38, 57, 114);
       background-color: transparent;
       font-size:14px;
+      font-weight: 600;
+      @include borderNone;
     }
 
     .fab {
-      @include icon-setting
+      @include fullCenterAll;
     }
   }
 }
@@ -96,9 +74,9 @@ main {
   display: table;
   color: #58402c;
 
-  .blocco-centrale{
+  section.blocco-centrale{
     display: flex;
-    margin: 100px 128px;
+    @include standSpacingSection;
 
     .blocco-bottoni{
       display: flex;
@@ -124,15 +102,14 @@ main {
       }
       .bottone, span{
         margin-right: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display-flex
       }
       button{
         font-size:14px;
         font-weight:600;
         background-color: transparent;
         color: white;
+        @include borderNone;
       }
 
       span{
@@ -160,7 +137,6 @@ main {
         font-size:14px;
         line-height:21px;
       }
-
     }
 
     .blocco-destra{
@@ -169,38 +145,31 @@ main {
         height: 350px;
       }
     }
-
-  }
+ }    //FINE PARTE ALTA SITO
 
   hr{
     margin: 80px 0px 80px;
   }
 
-  // inizio blocco coloured
+  // INIZIO SEZIONE COLORATA PASTELLO
   .blocco-coloured{
     background: #FFE7D2;
-    flex-wrap: wrap;
-    margin:auto;
+    padding: 100px 128px;
 
     h2{
       text-align: center;
       font-weight:600;
-      margin: 50px 261px;
-      padding: 0px 148px;
+      margin: 50px auto;
     }
 
     .blocco-testo-img{
-      display: flex;
-      margin: auto;
-      justify-content: center;
+      @include display-flex-easy;
 
-      .blocco1,.blocco2,.blocco3{
+    .blocco1,.blocco2,.blocco3{
+        @include fullCenterAll;
         width: 274px;
         height: 200px;
         margin-bottom: 36px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-wrap: wrap;
 
         img{
@@ -218,33 +187,68 @@ main {
     }
 
     .img-big{
-      display: flex;
-      justify-content: center;
+      @include fullCenterAll;
       flex-wrap: wrap;
       margin-top: 36px;
+
       img{
         width: 280px;
       }
     }
+  }  // FINE SEZIONE COLORE PASTELLO
 
-
-  }
-  // FINE BLOCCO COLOURED
-
-  // INIZIO BLOCCO FEEDBACK
+  // INIZIO BLOCCO BIANCO FEEDBACK
   section.blocco-feedback{
 
-    div.provola {
+    .container{
+      @include display-flex-easy;
+      flex-wrap: nowrap;
+      @include standardSpacingDiv;
 
-      img{
-        @include photobig-settings
+      div.blocco-sx {
+        img{
+          @include photobig-settings
+        }
+      }
+      .photo_a_lato{
+        @include photoSmall-AlatoBig;
+      }
+      .blocco-dx{
+        .bloccoResizeTesto{
+          @include standardSpacingTextImg;
+          h1{
+            @include textDefaultSpacing;
+          }
+          p{
+            font-size: 21px;
+            @include textDefaultSpacing;
+          }
+        }
       }
     }
 
-    .blocco-dx{
+// INIZIO SECONDA SEZIONE DENTRO BLOCCO FEEDBACK
+      div.blocco-sx-2 {
+        .bloccoResizeTesto{
+          @include standardSpacingTextImg;
+          h1{
+            @include textDefaultSpacing;
+          }
+          p{
+            font-size: 21px;
+            @include textDefaultSpacing;
+          }
+        }
+        img{
+          @include photoSmall-AlatoBig
+        }
+      }
 
-    }
+      div.blocco-dx-2 {
+        img{
+          @include photobig-settings
+        }
+      }}
 
   }
 // FINE DEL BLOCCO MAIN
-}

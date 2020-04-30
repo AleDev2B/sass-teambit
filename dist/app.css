@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid grey;
   -webkit-font-smoothing: antialiased;
   font-family: "HarmoniaSansProCyr-Regular", Arial, sans-serif;
 }
@@ -10,7 +9,7 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 82vw;
   margin: auto;
   height: 75px;
@@ -44,7 +43,8 @@ header .bottone {
   width: 92px;
   height: 34px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   border-radius: 5px;
   border: 1px solid #263972;
 }
@@ -54,10 +54,16 @@ header .bottone:hover {
   color: white;
 }
 
+header .bottone:hover button {
+  color: white;
+}
+
 header .bottone button {
   color: #263972;
   background-color: transparent;
   font-size: 14px;
+  font-weight: 600;
+  border: 0px;
 }
 
 header .bottone .fab {
@@ -72,23 +78,23 @@ main {
   color: #58402c;
 }
 
-main .blocco-centrale {
+main section.blocco-centrale {
   display: flex;
   margin: 100px 128px;
 }
 
-main .blocco-centrale .blocco-bottoni {
+main section.blocco-centrale .blocco-bottoni {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 35px;
 }
 
-main .blocco-centrale .blocco-bottoni .fab {
+main section.blocco-centrale .blocco-bottoni .fab {
   display: flex;
   align-items: center;
 }
 
-main .blocco-centrale .blocco-bottoni .bottone {
+main section.blocco-centrale .blocco-bottoni .bottone {
   width: 185px;
   height: 35px;
   border-radius: 8px;
@@ -97,36 +103,37 @@ main .blocco-centrale .blocco-bottoni .bottone {
   color: white;
 }
 
-main .blocco-centrale .blocco-bottoni .bottone:hover {
+main section.blocco-centrale .blocco-bottoni .bottone:hover {
   background: blue;
 }
 
-main .blocco-centrale .blocco-bottoni .bottone,
-main .blocco-centrale .blocco-bottoni span {
+main section.blocco-centrale .blocco-bottoni .bottone,
+main section.blocco-centrale .blocco-bottoni span {
   margin-right: 15px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
 }
 
-main .blocco-centrale .blocco-bottoni button {
+main section.blocco-centrale .blocco-bottoni button {
   font-size: 14px;
   font-weight: 600;
   background-color: transparent;
   color: white;
+  border: 0px;
 }
 
-main .blocco-centrale .blocco-bottoni span {
+main section.blocco-centrale .blocco-bottoni span {
   font-size: 13px;
 }
 
-main .blocco-centrale .blocco-sinistra h1 {
+main section.blocco-centrale .blocco-sinistra h1 {
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 30px;
 }
 
-main .blocco-centrale .blocco-sinistra p {
+main section.blocco-centrale .blocco-sinistra p {
   font-size: 22px;
   line-height: 33px;
   margin-bottom: 40px;
@@ -134,12 +141,12 @@ main .blocco-centrale .blocco-sinistra p {
   font-weight: 400;
 }
 
-main .blocco-centrale .blocco-sinistra a {
+main section.blocco-centrale .blocco-sinistra a {
   font-size: 14px;
   line-height: 21px;
 }
 
-main .blocco-centrale .blocco-destra img {
+main section.blocco-centrale .blocco-destra img {
   width: 570px;
   height: 350px;
 }
@@ -150,32 +157,29 @@ main hr {
 
 main .blocco-coloured {
   background: #FFE7D2;
-  flex-wrap: wrap;
-  margin: auto;
+  padding: 100px 128px;
 }
 
 main .blocco-coloured h2 {
   text-align: center;
   font-weight: 600;
-  margin: 50px 261px;
-  padding: 0px 148px;
+  margin: 50px auto;
 }
 
 main .blocco-coloured .blocco-testo-img {
   display: flex;
-  margin: auto;
   justify-content: center;
 }
 
 main .blocco-coloured .blocco-testo-img .blocco1,
 main .blocco-coloured .blocco-testo-img .blocco2,
 main .blocco-coloured .blocco-testo-img .blocco3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 274px;
   height: 200px;
   margin-bottom: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -199,6 +203,7 @@ main .blocco-coloured .blocco-testo-img .blocco3 p {
 
 main .blocco-coloured .img-big {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 36px;
@@ -208,7 +213,61 @@ main .blocco-coloured .img-big img {
   width: 280px;
 }
 
-main section.blocco-feedback div.provola img {
+main section.blocco-feedback .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 80px 0 25px;
+  margin: 30px 0 30px 0;
+}
+
+main section.blocco-feedback .container div.blocco-sx img {
+  width: 768px;
+  height: 471px;
+}
+
+main section.blocco-feedback .container .photo_a_lato {
   width: 270px;
+}
+
+main section.blocco-feedback .container .blocco-dx .bloccoResizeTesto {
+  width: 420px;
+  height: 500px;
+}
+
+main section.blocco-feedback .container .blocco-dx .bloccoResizeTesto h1 {
+  line-height: 33px;
+  margin-bottom: 20px;
+}
+
+main section.blocco-feedback .container .blocco-dx .bloccoResizeTesto p {
+  font-size: 21px;
+  line-height: 33px;
+  margin-bottom: 20px;
+}
+
+main section.blocco-feedback div.blocco-sx-2 .bloccoResizeTesto {
+  width: 420px;
+  height: 500px;
+}
+
+main section.blocco-feedback div.blocco-sx-2 .bloccoResizeTesto h1 {
+  line-height: 33px;
+  margin-bottom: 20px;
+}
+
+main section.blocco-feedback div.blocco-sx-2 .bloccoResizeTesto p {
+  font-size: 21px;
+  line-height: 33px;
+  margin-bottom: 20px;
+}
+
+main section.blocco-feedback div.blocco-sx-2 img {
+  width: 270px;
+}
+
+main section.blocco-feedback div.blocco-dx-2 img {
+  width: 768px;
+  height: 471px;
 }
 
